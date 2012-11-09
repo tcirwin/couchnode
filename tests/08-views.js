@@ -26,9 +26,9 @@ setup(function(err, cb) {
                 // now lets find our key in the view
                 cb.view("test-design","test-view", {key : testkey}, function(err, resp, view) {
                     assert(!err, "error fetching view");
-                    assert(view.rows.length > 0)
-                    assert.equal(testkey, view.rows[0].key)
-                    setup.end()
+                    assert(view.rows.length > 0);
+                    assert.equal(testkey, view.rows[0].key);
+                    setup.end();
                 });
             // }); // defineView callback
         });
