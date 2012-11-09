@@ -104,9 +104,9 @@ the node extension. If you have installed libcouchbase in a location
 that isn't part of the default search path for your compiler, linker
 and runtime linker, you have to set the appropriate flags. ex:
 
-    CPPFLAGS="-I/opt/local/include" LDFLAGS="-L/opt/local/lib -Wl,-rpath,/opt/local/lib" node-waf configure
+    CPPFLAGS="-I/opt/local/include" LDFLAGS="-L/opt/local/lib -Wl,-rpath,/opt/local/lib" node-gyp configure
 
 To build and install the module, simply execute:
 
-    trond@ok> node-waf configure build install
+    trond@ok> node-gyp configure build install
 

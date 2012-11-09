@@ -2,20 +2,23 @@ SOURCE = src/couchbase_impl.cc src/couchbase_impl.h src/args.cc src/notify.cc   
          src/namemap.cc src/operations.cc src/namemap.h src/cas.cc      \
          src/cas.h
 
-all: .lock-wscript $(SOURCE)
-	@node-waf build
+all: configure $(SOURCE)
+	@node-gyp build
 
-.lock-wscript: wscript
-	@node-waf configure
+configure: $(bindings.gyp)
+	@node-gyp configure
 
 clean:
-	@node-waf clean
+	@node-gyp clean
 
 install:
-	@node-waf install
+	@node-gyp install
 
 dist:
-	@node-waf dist
+	@node-gyp dist
+
+remove:
+	@node-gyp remove
 
 check:
 	(cd tests && ./runtests.sh 0*.js)
