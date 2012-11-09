@@ -20,7 +20,7 @@ the Yolog source code for embedding
 #define GENYL_APESQ_INLINED
 #define APESQ_NO_INCLUDE
 
-#line 0 "yolog.c"
+#line 1 "yolog.c"
 
 /* needed for flockfile/funlockfile */
 #if (defined(__unix__) && (!defined(_POSIX_SOURCE)))
@@ -430,7 +430,7 @@ lcb_luv_yolog_set_screen_format(lcb_luv_yolog_context_group *grp,
 
     lcb_luv_yolog_set_fmtstr(&grp->o_screen, format, 1);
 }
-#line 0 "format.c"
+#line 1 "format.c"
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -706,7 +706,7 @@ lcb_luv_yolog_set_fmtstr(struct lcb_luv_yolog_output_st *output,
     output->fmtv = newfmt;
     return 0;
 }
-#line 0 "apesq/apesq.h"
+#line 1 "apesq/apesq.h"
 #ifndef APESQ_H_
 #define APESQ_H_
 
@@ -903,7 +903,7 @@ void
 apesq_dump_section(struct apesq_entry_st *root, int indent);
 
 #endif /* APESQ_H_ */
-#line 0 "apesq/apesq.c"
+#line 1 "apesq/apesq.c"
 #ifndef APESQ_NO_INCLUDE
 #include "apesq.h"
 #endif /* APESQ_NO_INCLUDE */
@@ -1618,7 +1618,7 @@ apesq_read_value(struct apesq_section_st *section,
     }
     return APESQ_VALUE_EINVAL;
 }
-#line 0 "yoconf.c"
+#line 1 "yoconf.c"
 #include "lcb_luv_yolog.h"
 #include <errno.h>
 #include <stdlib.h>
@@ -2088,7 +2088,7 @@ lcb_luv_yolog_parse_file(lcb_luv_yolog_context_group *grp,
     return 0;
 }
 
-#line 0 "util/lcb_luv_yolog.c"
+#line 1 "util/lcb_luv_yolog.c"
 #define GENYL_YL_STATIC
     
 static lcb_luv_yolog_context lcb_luv_yolog_logging_contexts_real[
