@@ -15,7 +15,7 @@ install:
 	@node-gyp install
 
 dist:
-	@node-gyp dist
+	@node-waf dist
 
 remove:
 	@node-gyp remove
